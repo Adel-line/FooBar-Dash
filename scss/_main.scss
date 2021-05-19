@@ -1,0 +1,21 @@
+@use "./variables";
+
+
+
+html {
+    background: var(--Bg);
+    --Bg:#FFFAF1;
+    --Color: #0B2626;
+}
+  
+html[data-theme='dark'] {
+     background: var(--Bg);
+     --Bg: #0B2626;
+     --Color: #E3B449;
+}
+
+body{
+    color: var(--Color);
+}
+  
+  

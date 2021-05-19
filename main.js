@@ -1,6 +1,10 @@
 import './style.scss'
+var checkbox = document.querySelector('input[name=mode]');
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+checkbox.addEventListener('change', function() {
+    if(this.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark')
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light')
+    }
+})

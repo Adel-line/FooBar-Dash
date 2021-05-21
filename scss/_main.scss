@@ -77,12 +77,14 @@ p {
     align-items: baseline;
     width: 100vw;
     margin-top: -1vw;
+    pointer-events: none;
 }
 
 #bar img {
     height: 22vw;
     margin-right: -8vw;
     pointer-events: none;
+    z-index: -1;
 }
 
 /*Table Overview*/ 

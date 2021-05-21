@@ -8,11 +8,66 @@
   <title>Vite App</title>
 </head>
 
+
 <body>
-  <div id="app">
-    <input class="container_toggle" type="checkbox" id="switch" name="mode">
-    <label for="switch">Toggle</label>
-  </div>
+  <header>
+    <h1>FOOBAR</h1>
+    <P>INVENTORY</P>
+    <div id="app">
+      <input class="container_toggle" type="checkbox" id="switch" name="mode">
+      <label id="mode" for="switch">Dark Mode</label>
+    </div>
+  </header>
+  <main>
+    <div id="pipe">
+      <div id="pipeshade"></div>
+    </div>
+    <div id="bar">
+      <img src="./Images/tap1@2x.png" alt="Fairy tale ale">
+      <img src="./Images/tap3@2x.png" alt="Hoppily ever after">
+      <img src="./Images/tap4@2x.png" alt="Hollaback">
+      <img src="./Images/tap2@2x.png" alt="El Hefe">
+      <img src="./Images/tap3@2x.png" alt="Mowintime">
+      <img src="./Images/tap1@2x.png" alt="Row 26">
+      <img src="./Images/tap2@2x.png" alt="Ruined Childhood">
+      <img src="./Images/tap4@2x.png" alt="Githop">
+      <img src="./Images/tap2@2x.png" alt="Sleighride">
+      <img src="./Images/tap3@2x.png" alt="Steampunk">
+    </div>
+
+    <div id="statistics">
+
+    </div>
+
+    <div id="bartenders">
+      <div id="Jonas">
+        <img src="./Images/jonas@2x.png" alt="">
+      </div>
+      <div id="Peter">
+        <img src="./Images/peter@2x.png" alt="">
+      </div>
+      <div id="Dannie">
+        <img src="./Images/Dannie@2x.png" alt="">
+      </div>
+    </div>
+    <section id="tables">
+      <div id="orders"></div>
+      <div id="overview">
+        <img class="t1" src="./Images/tableR@2x.png" alt="table2">
+        <img class="t2" src="./Images/tableR@2x.png" alt="table2">
+        <img class="t3" src="./Images/tableR@2x.png" alt="table3">
+        <img class="t4" src="./Images/tableS@2x.png" alt="table4">
+        <img class="t5" src="./Images/tableS@2x.png" alt="table5">
+        <img class="t6" src="./Images/tableS@2x.png" alt="table6">
+      </div>
+    </section>
+  </main>
+
+  <template id="beersinfo">
+    <img src="" alt="labels">
+    <h2><span>Name</span></h2>
+    <p><span>Capacity</span></p>
+  </template>
   <script type="module" src="/main.js"></script>
 </body>
 

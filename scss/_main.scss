@@ -6,16 +6,224 @@ html {
     background: var(--Bg);
     --Bg:#FFFAF1;
     --Color: #0B2626;
+    --Border: #563116;
 }
   
 html[data-theme='dark'] {
      background: var(--Bg);
      --Bg: #0B2626;
      --Color: #E3B449;
+     --Border: #FFFAF1;
 }
 
 body{
     color: var(--Color);
+    margin: 0px;
 }
-  
-  
+/*Header*/ 
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #FFFAF1;
+    margin-top: -1vw;
+    padding: 0.5vw;
+    height: 3vw;
+}
+
+label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} 
+
+main {
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} 
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*Pipe*/
+
+#pipe {
+    position: absolute;
+    width: 100%;
+    height: 2.5vw;
+    background-color: rgb(156, 156, 156);
+    margin-top: 5vw;
+}
+
+#pipeshade {
+    position: absolute;
+    width: 100%;
+    height: 1.5vw;
+    background-color: rgb(110, 110, 110);
+    margin-top: 1vw;
+}
+
+/*Bar*/
+
+#bar {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 100vw;
+    margin-top: -1vw;
+}
+
+#bar img {
+    height: 22vw;
+    margin-right: -8vw;
+}
+
+/*Table Overview*/ 
+
+#tables {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    height: 26vw;
+    margin-top: 20vw;
+    margin-left: 45vw;
+    border: 0.2vw solid var(--Border);
+    border-radius: 0.5vw;
+
+}
+
+#orders {
+    width: 20vw;
+    height: 26.1vw;
+    background-color: var(--Border);
+    margin: 0;
+    margin-left: -0.1vw;
+}
+
+#overview {
+width: 40vw;
+height: 20vw;
+margin-left: 2vw;
+}
+
+.t1 {
+    position: relative;
+    height: 10vw;
+    width: 10vw;
+    top: 5vw;
+}
+
+.t2 {
+    position: relative;
+    height: 10vw;
+    width: 10vw;
+    top:1vw;
+    left: 0.5vw;
+}
+.t3 {
+    position: relative;
+    height: 10vw;
+    width: 10vw;
+    top: 5vw;
+    left: 1vw;
+}
+.t4 {
+    position: relative;
+    height: 8vw;
+    width: 8vw;
+    top: 6.5vw;
+}
+.t5 {
+    position: relative;
+    height: 8vw;
+    width: 8vw;
+    top: 6.5vw;
+    left: 3vw;
+}
+
+.t6 {
+    position: relative;
+    height: 8vw;
+    width: 8vw;
+    top: 6.5vw;
+    left: 6vw;
+}
+
+
+/*Bartenders*/
+
+#bartenders {
+    position: absolute;
+    height: 26vw;
+    width: 15vw;
+    margin-top: 20vw;
+    margin-left: 25vw;
+}
+
+#Jonas {
+    position: relative;
+height: 7vw;
+width: 15vw;
+border: 0.2vw solid var(--Border);
+border-radius: 0.5vw;
+}
+
+#Jonas img {
+    width: 10vw;
+    height: 10vw;
+    margin-top: -1vw;
+    margin-left: -2vw;
+
+}
+
+#Peter {
+    position: relative;
+height: 7vw;
+width: 15vw;
+border: 0.2vw solid var(--Border);
+border-radius: 0.5vw;
+top: 2vw;
+}
+
+#Peter img {
+    width: 11vw;
+    height: 11vw;
+    margin-top: -1.5vw;
+    margin-left: -2.5vw;
+}
+
+#Dannie {
+    position: relative;
+height: 7vw;
+width: 15vw;
+border: 0.2vw solid var(--Border);
+border-radius: 0.5vw;
+top: 3.5vw;
+}
+
+
+#Dannie img {
+    width: 6.5vw;
+    height: 6.5vw;
+    margin-top: 0.5vw;
+}
+
+
+/*Statistics*/
+
+#statistics {
+    position: absolute;
+    border: 0.2vw solid var(--Border);
+    border-radius: 0.5vw;
+    height: 26vw;
+    width: 15vw;
+    margin-top: 20vw;
+    margin-left: 4vw;
+}
+

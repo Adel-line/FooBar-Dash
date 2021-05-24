@@ -1,6 +1,7 @@
 @use "./variables";
 
 #modal {
+    display: none;
     position: absolute;
     background-color: var(--Modal);
     border-radius: 1.5vw;

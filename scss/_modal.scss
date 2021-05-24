@@ -1,0 +1,49 @@
+@use "./variables";
+
+#modal {
+    position: absolute;
+    background-color: var(--Modal);
+    border-radius: 1.5vw;
+    width: 45vw;
+    height: 35vw;
+    margin-left: 25vw;
+    margin-top: 5vw;
+}
+
+#container {
+    position: relative;
+    background-color: var(--Container);
+    border-radius: 1.5vw;
+    width: 28vw;
+    height: 25vw;
+    margin-left: 8.5vw;
+    margin-top: 4vw;
+}
+
+#headerC {
+    background-color: #A1763A;
+    display: flex;
+    justify-content: space-around;
+    height: 2.7vw;
+    border-radius: 0.9vw;
+    align-items: baseline;
+    margin-top: -20vw;
+}
+
+table {
+    width: 25vw;
+    height: 20vw;
+    margin-top: -2vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#container button {
+    background-color: #E3B449;
+    border: 0.5vw solid #E3B449;
+    border-radius: 0.4vw;
+    width: 7vw;
+    height: 2vw;
+    margin-left: 6vw;
+    margin-top: 19vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

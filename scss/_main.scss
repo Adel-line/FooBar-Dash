@@ -27,6 +27,10 @@ body{
     margin: 0px;
 }
 /*Header*/ 
+#app{
+    width: 15vw;
+    display: flex;
+}
 
 header {
     display: flex;
@@ -36,10 +40,38 @@ header {
     background-color: #FFFAF1;
     margin-top: -1vw;
     padding: 0.5vw;
-    height: 3vw;
+    height: 4vw;
+}
+#switch{
+    cursor: pointer;
+    width: 4.5vw;
+    height: 2vw;
+    background: var(--Color);
+    margin: 0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    position: relative;
+    appearance: none;
 }
 
+#switch:after {
+    content: '';
+    background:var(--Bg);
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms ;
+    transform: translateX(-1vw) ;
+}
+
+#switch:checked:after {   
+    transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms ;
+    transform: translateX(1vw) ;
+}
 label {
+    font-size: 1.8vw;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     z-index: 10;
 } 
@@ -49,10 +81,12 @@ main {
 }
 
 h1 {
+    font-size: 2vw;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 } 
 
 p {
+    font-size: 1.8vw;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -176,6 +210,17 @@ margin-left: 2vw;
     width: 15vw;
     margin-top: 20vw;
     margin-left: 25vw;
+}
+#bartenders > div {
+    display: flex;
+}
+#bartenders div p {
+    font-size: 1vw;
+    margin: 0;
+}
+#bartendInfo {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
 #Jonas {

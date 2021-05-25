@@ -1,286 +1,304 @@
 @use "./variables";
 
-
-
 html {
-    background: var(--Bg);
-    --Bg:#FFFAF1;
-    --Color: #0B2626;
-    --Border: #563116;
-    --Modal: #0b2626da;
-    --Container: #FFFAF1; 
-}
-  
-html[data-theme='dark'] {
-     background: var(--Bg);
-     --Bg: #0B2626;
-     --Color: #E3B449;
-     --Border: #FFFAF1;
-     --Modal: #e3b549e7;
-     --Container: #FFFAF1; 
+  background: var(--Bg);
+  --Bg: #fffaf1;
+  --Color: #0b2626;
+  --Border: #563116;
+  --Modal: #0b2626da;
+  --Container: #fffaf1;
 }
 
-
-
-body{
-    color: var(--Color);
-    margin: 0px;
+html[data-theme="dark"] {
+  background: var(--Bg);
+  --Bg: #0b2626;
+  --Color: #e3b449;
+  --Border: #fffaf1;
+  --Modal: #e3b549e7;
+  --Container: #fffaf1;
 }
-/*Header*/ 
-#app{
-    width: 15vw;
-    display: flex;
+
+body {
+  color: var(--Color);
+  margin: 0px;
+}
+/*Header*/
+#app {
+  width: 15vw;
+  display: flex;
 }
 
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-    background-color: #FFFAF1;
-    margin-top: -1vw;
-    padding: 0.5vw;
-    height: 4vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: #fffaf1;
+  margin-top: -1vw;
+  padding: 0.5vw;
+  height: 4vw;
 }
-#switch{
-    cursor: pointer;
-    width: 4.5vw;
-    height: 2vw;
-    background: var(--Color);
-    margin: 0 ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    position: relative;
-    appearance: none;
+#switch {
+  cursor: pointer;
+  width: 4.5vw;
+  height: 2vw;
+  background: var(--Color);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  position: relative;
+  appearance: none;
 }
 
 #switch:after {
-    content: '';
-    background:var(--Bg);
-    width: 1.5vw;
-    height: 1.5vw;
-    border-radius: 50%;
-    transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms ;
-    transform: translateX(-1vw) ;
+  content: "";
+  background: var(--Bg);
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 50%;
+  transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+  transform: translateX(-1vw);
 }
 
-#switch:checked:after {   
-    transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms ;
-    transform: translateX(1vw) ;
+#switch:checked:after {
+  transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+  transform: translateX(1vw);
 }
 label {
-    font-size: 1.8vw;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    z-index: 10;
-} 
+  font-size: 1.8vw;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  z-index: 10;
+}
 
 main {
-    width: 100%;
+  width: 100%;
 }
 
 h1 {
-    font-size: 2vw;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-} 
+  font-size: 2vw;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
 
 p {
-    font-size: 1.8vw;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.8vw;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 /*Pipe*/
 
 #pipe {
-    position: absolute;
-    width: 100%;
-    height: 2.5vw;
-    background-color: rgb(156, 156, 156);
-    margin-top: 5vw;
-    z-index: -2;
+  position: absolute;
+  width: 100%;
+  height: 2.5vw;
+  background-color: rgb(156, 156, 156);
+  margin-top: 5vw;
+  z-index: -2;
 }
 
 #pipeshade {
-    position: absolute;
-    width: 100%;
-    height: 1.5vw;
-    background-color: rgb(110, 110, 110);
-    margin-top: 1vw;
-    z-index: -2;
+  position: absolute;
+  width: 100%;
+  height: 1.5vw;
+  background-color: rgb(110, 110, 110);
+  margin-top: 1vw;
+  z-index: -2;
 }
 
 /*Bar*/
 
 #bar {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    width: 100vw;
-    margin-top: -0.5vw;
-    pointer-events: none;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  width: 100vw;
+  margin-top: -0.5vw;
+  pointer-events: none;
 }
 
-#bar img {
-    height: 22vw;
-    margin-right: -8vw;
-    pointer-events: none;
-    z-index: -1;
+#bar #drink img {
+  height: 22vw;
+  margin-right: -8vw;
+  pointer-events: none;
+  z-index: -1;
 }
 
-/*Table Overview*/ 
+/* DRINK EMPTYING */
+#drink {
+  position: relative;
+}
+
+#liquidBox {
+  z-index: 100;
+  height: 22vw;
+  width: auto;
+  position: absolute;
+  left: 0vw;
+  top: -4vw;
+}
+
+#liquid {
+  animation: liquid 4s linear infinite;
+  align-content: center;
+}
+
+@keyframes liquid {
+  0% {
+    transform: translateY(12vw);
+  }
+  100% {
+    transform: translateY(30vw);
+  }
+}
+
+/*Table Overview*/
 
 #tables {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    width: 50vw;
-    height: 26vw;
-    margin-top: 20vw;
-    margin-left: 45vw;
-    border: 0.2vw solid var(--Border);
-    border-radius: 0.5vw;
-
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+  height: 26vw;
+  margin-top: 20vw;
+  margin-left: 45vw;
+  border: 0.2vw solid var(--Border);
+  border-radius: 0.5vw;
 }
 
 #orders {
-    width: 20vw;
-    height: 26.1vw;
-    background-color: var(--Border);
-    margin: 0;
-    margin-left: -0.1vw;
+  width: 20vw;
+  height: 26.1vw;
+  background-color: var(--Border);
+  margin: 0;
+  margin-left: -0.1vw;
 }
 
 #overview {
-width: 40vw;
-height: 20vw;
-margin-left: 2vw;
+  width: 40vw;
+  height: 20vw;
+  margin-left: 2vw;
 }
 
 .t1 {
-    position: relative;
-    height: 10vw;
-    width: 10vw;
-    top: 5vw;
+  position: relative;
+  height: 10vw;
+  width: 10vw;
+  top: 5vw;
 }
 
 .t2 {
-    position: relative;
-    height: 10vw;
-    width: 10vw;
-    top:1vw;
-    left: 0.5vw;
+  position: relative;
+  height: 10vw;
+  width: 10vw;
+  top: 1vw;
+  left: 0.5vw;
 }
 .t3 {
-    position: relative;
-    height: 10vw;
-    width: 10vw;
-    top: 5vw;
-    left: 1vw;
+  position: relative;
+  height: 10vw;
+  width: 10vw;
+  top: 5vw;
+  left: 1vw;
 }
 .t4 {
-    position: relative;
-    height: 8vw;
-    width: 8vw;
-    top: 6.5vw;
+  position: relative;
+  height: 8vw;
+  width: 8vw;
+  top: 6.5vw;
 }
 .t5 {
-    position: relative;
-    height: 8vw;
-    width: 8vw;
-    top: 6.5vw;
-    left: 3vw;
+  position: relative;
+  height: 8vw;
+  width: 8vw;
+  top: 6.5vw;
+  left: 3vw;
 }
 
 .t6 {
-    position: relative;
-    height: 8vw;
-    width: 8vw;
-    top: 6.5vw;
-    left: 6vw;
+  position: relative;
+  height: 8vw;
+  width: 8vw;
+  top: 6.5vw;
+  left: 6vw;
 }
-
 
 /*Bartenders*/
 
 #bartenders {
-    position: absolute;
-    height: 26vw;
-    width: 15vw;
-    margin-top: 20vw;
-    margin-left: 25vw;
+  position: absolute;
+  height: 26vw;
+  width: 15vw;
+  margin-top: 20vw;
+  margin-left: 25vw;
 }
 #bartenders > div {
-    display: flex;
+  display: flex;
 }
 #bartenders div p {
-    font-size: 1vw;
-    margin: 0;
+  font-size: 1vw;
+  margin: 0;
 }
 #bartendInfo {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
 #Jonas {
-    position: relative;
-height: 7vw;
-width: 15vw;
-border: 0.2vw solid var(--Border);
-border-radius: 0.5vw;
+  position: relative;
+  height: 7vw;
+  width: 15vw;
+  border: 0.2vw solid var(--Border);
+  border-radius: 0.5vw;
 }
 
 #Jonas img {
-    width: 10vw;
-    height: 10vw;
-    margin-top: -1vw;
-    margin-left: -2vw;
-
+  width: 10vw;
+  height: 10vw;
+  margin-top: -1vw;
+  margin-left: -2vw;
 }
 
 #Peter {
-    position: relative;
-height: 7vw;
-width: 15vw;
-border: 0.2vw solid var(--Border);
-border-radius: 0.5vw;
-top: 2vw;
+  position: relative;
+  height: 7vw;
+  width: 15vw;
+  border: 0.2vw solid var(--Border);
+  border-radius: 0.5vw;
+  top: 2vw;
 }
 
 #Peter img {
-    width: 11vw;
-    height: 11vw;
-    margin-top: -1.5vw;
-    margin-left: -2.5vw;
+  width: 11vw;
+  height: 11vw;
+  margin-top: -1.5vw;
+  margin-left: -2.5vw;
 }
 
 #Dannie {
-    position: relative;
-height: 7vw;
-width: 15vw;
-border: 0.2vw solid var(--Border);
-border-radius: 0.5vw;
-top: 3.5vw;
+  position: relative;
+  height: 7vw;
+  width: 15vw;
+  border: 0.2vw solid var(--Border);
+  border-radius: 0.5vw;
+  top: 3.5vw;
 }
-
 
 #Dannie img {
-    width: 6.5vw;
-    height: 6.5vw;
-    margin-top: 0.5vw;
+  width: 6.5vw;
+  height: 6.5vw;
+  margin-top: 0.5vw;
 }
-
 
 /*Statistics*/
 
 #statistics {
-    position: absolute;
-    border: 0.2vw solid var(--Border);
-    border-radius: 0.5vw;
-    height: 26vw;
-    width: 15vw;
-    margin-top: 20vw;
-    margin-left: 4vw;
+  position: absolute;
+  border: 0.2vw solid var(--Border);
+  border-radius: 0.5vw;
+  height: 26vw;
+  width: 15vw;
+  margin-top: 20vw;
+  margin-left: 4vw;
 }
-

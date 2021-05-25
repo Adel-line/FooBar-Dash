@@ -110,24 +110,29 @@ p {
 
 #bar {
   position: absolute;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 1vw;
   align-items: baseline;
   width: 100vw;
   margin-top: -0.5vw;
   pointer-events: none;
+  overflow-x: hidden;
 }
 
-#bar #drink img {
+#bar .drink img {
   height: 22vw;
-  margin-right: -8vw;
   pointer-events: none;
   z-index: -1;
 }
 
 /* DRINK EMPTYING */
-#drink {
+.drink {
   position: relative;
+  width: 10vw;
+  display: flex;
+  align-content: center;
+  margin-left: -3.5vw;
 }
 
 #liquidBox {
@@ -139,17 +144,20 @@ p {
   top: -4vw;
 }
 
-#liquid {
-  animation: liquid 4s linear infinite;
+.liquid {
+  animation: liquid var(--animation-time) linear infinite;
   align-content: center;
+  width: 0.8vw;
+  height: 11vw;
+  fill: blue;
 }
 
 @keyframes liquid {
   0% {
-    transform: translateY(12vw);
+    transform: translateY(0vw);
   }
   100% {
-    transform: translateY(30vw);
+    transform: translateY(10vw);
   }
 }
 
@@ -175,53 +183,72 @@ p {
   margin-left: -0.1vw;
 }
 
+.orderHeaders {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
 #overview {
   width: 40vw;
   height: 20vw;
   margin-left: 2vw;
+  align-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .t1 {
   position: relative;
-  height: 10vw;
-  width: 10vw;
-  top: 5vw;
-}
-
-.t2 {
-  position: relative;
-  height: 10vw;
-  width: 10vw;
-  top: 1vw;
-  left: 0.5vw;
-}
-.t3 {
-  position: relative;
-  height: 10vw;
-  width: 10vw;
-  top: 5vw;
+  height: 7vw;
+  width: 7vw;
   left: 1vw;
 }
-.t4 {
+.t2 {
   position: relative;
-  height: 8vw;
-  width: 8vw;
-  top: 6.5vw;
-}
-.t5 {
-  position: relative;
-  height: 8vw;
-  width: 8vw;
-  top: 6.5vw;
-  left: 3vw;
+  height: 7vw;
+  width: 7vw;
+  left: 1vw;
 }
 
+.t3 {
+  position: relative;
+  height: 7vw;
+  width: 7vw;
+  left: 1vw;
+}
+
+.t4 {
+  position: relative;
+  height: 9vw;
+  width: 9vw;
+}
+
+.t5 {
+  position: relative;
+  height: 9vw;
+  width: 9vw;
+}
 .t6 {
   position: relative;
-  height: 8vw;
-  width: 8vw;
-  top: 6.5vw;
-  left: 6vw;
+  height: 9vw;
+  width: 9vw;
+}
+
+.t7 {
+  position: relative;
+  height: 9vw;
+  width: 9vw;
+}
+
+.t8 {
+  position: relative;
+  height: 9vw;
+  width: 9vw;
+}
+.t9 {
+  position: relative;
+  height: 9vw;
+  width: 9vw;
 }
 
 /*Bartenders*/

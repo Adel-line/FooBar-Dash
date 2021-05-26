@@ -35,3 +35,10 @@ function prepIfos(data) {
         
     }); 
 }
+
+// Random Time
+const liquid = document.querySelectorAll(".liquid");
+liquid.forEach((x) => {
+    const time = Math.random() * 100 + 0.2;
+    x.style.setProperty('--animation-time', time +'s');
+});

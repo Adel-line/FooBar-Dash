@@ -80,10 +80,24 @@ main {
     width: 100%;
 }
 
+// TEXT 
+
 h1 {
     font-size: 2vw;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 } 
+
+h2 {
+    text-align: center;
+    font-size: 1vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+ h3 {
+    text-align: center;
+    font-size: 1vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 p {
     font-size: 1.8vw;
@@ -232,10 +246,9 @@ border-radius: 0.5vw;
 }
 
 #Jonas img {
-    width: 10vw;
-    height: 10vw;
-    margin-top: -1vw;
-    margin-left: -2vw;
+    width: 6.5vw;
+    height: 6.5vw;
+    margin-top: 0.5vw;
 
 }
 
@@ -249,10 +262,9 @@ top: 2vw;
 }
 
 #Peter img {
-    width: 11vw;
-    height: 11vw;
-    margin-top: -1.5vw;
-    margin-left: -2.5vw;
+    width: 6.5vw;
+    height: 6.5vw;
+    margin-top: 0.5vw;
 }
 
 #Dannie {
@@ -271,6 +283,15 @@ top: 3.5vw;
     margin-top: 0.5vw;
 }
 
+// Bartenders Info 
+
+#bartendInfo {
+    position: relative;
+    width: 10vw;
+    height: 5vw;
+    top: 1vw;
+}
+
 
 /*Statistics*/
 
@@ -282,5 +303,31 @@ top: 3.5vw;
     width: 15vw;
     margin-top: 20vw;
     margin-left: 4vw;
+}
+
+.stat_header {
+    background-color: beige;
+    height: 2vw;
+    margin-top: 0.1vw;
+    border-radius: 0.2vw;
+}
+
+#stats_wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.general {
+    height: 7vw;
+}
+
+.textstats {
+width: 10vw;
+margin-left: 2.5vw;
+}
+
+.nums {
+    font-size: 3vw;
+margin-left: 7vw;
 }
 

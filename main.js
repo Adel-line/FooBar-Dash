@@ -1,5 +1,7 @@
 import './style.scss'
 var checkbox = document.querySelector('input[name=mode]');
+let beerTot =  0;
+let queueItemes = [];
 
 checkbox.addEventListener('change', function() {
     if(this.checked) {
@@ -28,14 +30,38 @@ function loadData (){
 
 
 function prepIfos(data) {
+    let servedC = [];
+    let queue = data.queue ;
+    
+    
+    
     data.bartenders.forEach(element => {
         document.querySelector("#"+element.name+ " .bartendname").innerHTML = element.name;
         document.querySelector("#"+element.name+ " .bartendStat").innerHTML = "status :"+ element.statusDetail;
         document.querySelector("#"+element.name+ " .bartendServd").innerHTML =  element.servingCustomer;
-        
+        servedC.push(element.servingCustomer);
     }); 
+    if (servedC.length===3){
+        servedC.sort();
+        console.log(servedC);
+        document.querySelector(".served").innerHTML = servedC[0] -1 ;
+    }
+    document.querySelector(".waiting").innerHTML = queue.length;      
+    queue.forEach( element =>{
+        if (!queueItemes.findIndex((item) => item.id === element.id)){
+            beerTot += element.order.length ;
+            console.log(beerTot);
+        }
+    });
+    data.queue.forEach(element => {queueItemes.push(element.id)});
+    console.log(queueItemes);
+    document.querySelector(".sold").innerHTML = beerTot;
+    wait();
 }
 
+function wait() {
+    setTimeout(loadData,5000);
+}
 // Random Time
 const liquid = document.querySelectorAll(".liquid");
 liquid.forEach((x) => {

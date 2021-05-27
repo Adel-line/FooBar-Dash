@@ -48,12 +48,13 @@ function prepIfos(data) {
     }
     document.querySelector(".waiting").innerHTML = queue.length;      
     queue.forEach( element =>{
-        if (!queueItemes.findIndex((item) => item.id === element.id)){
+        if (queueItemes.findIndex((item) => item.id === element.id) === -1){
             beerTot += element.order.length ;
             console.log(beerTot);
+            console.log("elements are not here");
         }
     });
-    data.queue.forEach(element => {queueItemes.push(element.id)});
+    queueItemes = queue ;
     console.log(queueItemes);
     document.querySelector(".sold").innerHTML = beerTot;
     wait();

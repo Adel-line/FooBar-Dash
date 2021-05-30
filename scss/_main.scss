@@ -22,6 +22,11 @@ body {
   color: var(--Color);
   margin: 0px;
 }
+
+main {
+height: auto;
+width: 100%;
+}
 /*Header*/
 #app {
   width: 15vw;
@@ -134,8 +139,9 @@ p {
   overflow-x: hidden;
 }
 
-#bar .drink img {
-  height: 22vw;
+#bar .drink > img {
+  height: 20.5vw;
+  margin-left: 2.6vw;
   pointer-events: none;
   z-index: -1;
 }
@@ -150,25 +156,28 @@ p {
 }
 
 #liquidBox {
-  z-index: 100;
-  height: 22vw;
-  width: auto;
+  z-index: -2;
+  height: 25vw;
+  width: 8vw;
   position: absolute;
-  left: 0vw;
-  top: -4vw;
+  left: 2.7vw;
+  top: 0.2vw;
 }
+
+
 
 .liquid {
   animation: liquid var(--animation-time) linear infinite;
-  align-content: center;
-  width: 0.8vw;
-  height: 11vw;
-  fill: blue;
+  width: 17vw;
+  height: 22vw;
+  fill: #ebb328;
+  transform-origin: bottom;
+
 }
 
 @keyframes liquid {
   0% {
-    transform: translateY(0vw);
+    transform: translateY(0.2vw);
   }
   100% {
     transform: translateY(10vw);

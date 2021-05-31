@@ -37,8 +37,8 @@ function prepIfos(data) {
     
     data.bartenders.forEach(element => {
         document.querySelector("#"+element.name+ " .bartendname").innerHTML = element.name;
-        document.querySelector("#"+element.name+ " .bartendStat").innerHTML = "status :"+ element.statusDetail;
-        document.querySelector("#"+element.name+ " .bartendServd").innerHTML =  element.servingCustomer;
+        document.querySelector("#"+element.name+ " .bartendStat").innerHTML = "Status : "+ element.statusDetail;
+        document.querySelector("#"+element.name+ " .bartendServd").innerHTML = "Serving client : "+ element.servingCustomer;
         servedC.push(element.servingCustomer);
     }); 
     if (servedC.length===3){

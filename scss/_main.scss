@@ -169,7 +169,7 @@ p {
 .liquid {
   animation: liquid var(--animation-time) linear infinite;
   width: 17vw;
-  height: 22vw;
+  height: 50vw;
   fill: #ebb328;
   transform-origin: bottom;
 
@@ -177,10 +177,10 @@ p {
 
 @keyframes liquid {
   0% {
-    transform: translateY(0.2vw);
+    transform: translateY(0vw);
   }
   100% {
-    transform: translateY(10vw);
+    transform: translateY(22vw);
   }
 }
 

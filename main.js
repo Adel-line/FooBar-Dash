@@ -64,7 +64,7 @@ function wait() {
     setTimeout(loadData,5000);
 }
 // Random Time
-const liquid = document.querySelectorAll(".liquid");
+const liquid = document.querySelectorAll(".liquidDiv");
 liquid.forEach((x) => {
     const time = Math.random() * 1000 + 0.2;
     x.style.setProperty('--animation-time', time +'s');

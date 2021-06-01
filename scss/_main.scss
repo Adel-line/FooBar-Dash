@@ -7,7 +7,7 @@ html {
   --Border: #563116;
   --Modal: #0b2626da;
   --Container: #fffaf1;
-  --order:  white;
+  --order: white;
 }
 
 html[data-theme="dark"] {
@@ -17,19 +17,19 @@ html[data-theme="dark"] {
   --Border: #fffaf1;
   --Modal: #e3b549e7;
   --Container: #fffaf1;
-  --orders:#fffaf1  ;
+  --orders: #fffaf1;
 }
 
 body {
   color: var(--Color);
   margin: 0px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   overflow-x: hidden;
 }
 
 main {
-height: auto;
-width: 100%;
+  height: auto;
+  width: 100%;
 }
 /*Header*/
 #app {
@@ -81,11 +81,7 @@ label {
   z-index: 10;
 }
 
-main {
-  width: 100%;
-}
-
-// TEXT 
+// TEXT
 
 h1 {
   font-size: 2vw;
@@ -93,15 +89,16 @@ h1 {
 }
 
 h2 {
-    text-align: center;
-    font-size: 1vw;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  font-size: 1vw;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
- h3 {
-    text-align: center;
-    font-size: 1vw;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+h3 {
+  text-align: center;
+  font-size: 1vw;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 p {
@@ -116,7 +113,7 @@ p {
   width: 100%;
   height: 2.5vw;
   background-color: rgb(156, 156, 156);
-  margin-top: 5vw;
+  margin-top: 5.4vw;
   z-index: -2;
 }
 
@@ -125,7 +122,7 @@ p {
   width: 100%;
   height: 1.5vw;
   background-color: rgb(110, 110, 110);
-  margin-top: 1vw;
+  margin-top: 0.9vw;
   z-index: -2;
 }
 
@@ -134,57 +131,45 @@ p {
 #bar {
   position: absolute;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 1vw;
+  grid-template-columns: repeat(7, 1fr);
   align-items: baseline;
   width: 100vw;
   margin-top: -0.5vw;
   pointer-events: none;
   overflow-x: hidden;
+  height: 19vw;
+  background-color: #fffaf1;
+  z-index: -10;
 }
 
-#bar .drink > img {
+/* DRINK EMPTYING */
+.liquidDiv {
+  animation: liquid var(--animation-time) linear infinite;
+  height: 12vw;
+  position: relative;
+  top: -13vw;
+  background-color: #ebb328;
+  z-index: -5;
+  transform-origin: bottom;
+}
+
+.drinkDiv {
+  width: 10vw;
+  overflow-x: hidden;
+}
+
+.drinkDiv > img {
   height: 20.5vw;
-  margin-left: 2.6vw;
   pointer-events: none;
   z-index: -1;
 }
 
-/* DRINK EMPTYING */
-.drink {
-  position: relative;
-  width: 10vw;
-  display: flex;
-  align-content: center;
-  margin-left: -3.5vw;
-}
-
-#liquidBox {
-  z-index: -2;
-  height: 25vw;
-  width: 8vw;
-  position: absolute;
-  left: 2.7vw;
-  top: 0.2vw;
-}
-
-
-
-.liquid {
-  animation: liquid var(--animation-time) linear infinite;
-  width: 17vw;
-  height: 50vw;
-  fill: #ebb328;
-  transform-origin: bottom;
-
-}
-
 @keyframes liquid {
   0% {
-    transform: translateY(0vw);
+    transform: scaleY(1);
   }
   100% {
-    transform: translateY(22vw);
+    transform: scaleY(0);
   }
 }
 
@@ -225,9 +210,12 @@ p {
   grid-template-columns: 2fr 1fr 1fr;
 }
 
+.orderHeaders > div {
+  font-size: 2vw;
+}
+
 #overview {
   width: 40vw;
-  height: 20vw;
   margin-left: 2vw;
   align-content: space-between;
   display: grid;
@@ -308,7 +296,7 @@ p {
   margin: 0;
 }
 .bartendInfo {
-  display: grid;  
+  display: grid;
   padding: 1vw;
   width: 12vw;
 }
@@ -322,7 +310,7 @@ p {
 
 #Jonas img {
   width: auto;
-  height:100%;
+  height: 100%;
 }
 
 #Peter {
@@ -335,11 +323,10 @@ p {
 
 #Peter img {
   width: auto;
-  height:100%;
+  height: 100%;
 }
 
 #Dannie {
-
   height: 7vw;
   width: 22vw;
   border: 0.2vw solid var(--Border);
@@ -349,12 +336,10 @@ p {
 
 #Dannie img {
   width: auto;
-  height:100%;
+  height: 100%;
 }
 
-// Bartenders Info 
-
-
+// Bartenders Info
 
 /*Statistics*/
 
@@ -369,28 +354,261 @@ p {
 }
 
 .stat_header {
-    background-color: beige;
-    height: 2vw;
-    margin-top: 0.1vw;
-    border-radius: 0.2vw;
+  background-color: beige;
+  height: 2vw;
+  margin-top: 0.1vw;
+  border-radius: 0.2vw;
 }
 
 #stats_wrap {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .general {
-    height: 7vw;
+  height: 7vw;
 }
 
 .textstats {
-width: 10vw;
-margin-left: 2.5vw;
+  width: 10vw;
+  margin-left: 2.5vw;
 }
 
 .nums {
+  font-size: 3vw;
+  width: 100%;
+  text-align: center;
+}
+
+// Screen sizes
+@media only screen and (max-width: 1100px) and (min-width: 750px) {
+  #statistics {
+    width: 90vw;
+    height: 25vw;
+    margin-top: 2vw;
+    border: 0.5vw solid var(--Border);
+  }
+  .stat_header {
+    height: 4.5vw;
+  }
+  h2 {
+    font-size: 3.5vw;
+  }
+  #stats_wrap {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .textstats {
+    width: 25vw;
+    margin-left: 0vw;
+  }
+  h3 {
+    margin-top: 0.5vw;
     font-size: 3vw;
-    width: 100%;
-    text-align: center;
+  }
+  .nums {
+    font-size: 6vw;
+  }
+  header > p {
+    position: absolute;
+    top: 33.5vw;
+    left: 44%;
+    font-size: 2.5vw;
+    font-weight: bold;
+  }
+  #pipe {
+    height: 5.5vw;
+    top: 7vw;
+    width: 140vw;
+  }
+  #pipeshade {
+    height: 3.5vw;
+  }
+  #bar {
+    margin-top: 31vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    pointer-events: inherit;
+    width: 90vw;
+    border: 0.5vw solid var(--Border);
+    border-radius: 0.5vw;
+    margin-left: 4vw;
+    height: 45vw;
+  }
+  .drinkDiv {
+    width: 20vw;
+  }
+  .liquidDiv {
+    top: -28vw;
+    height: 25vw;
+  }
+  .drinkDiv > img {
+    height: 45vw;
+  }
+  #tables {
+    margin-top: 79vw;
+    margin-left: 4vw;
+    width: 90vw;
+    height: 35vw;
+    border: 0.5vw solid var(--Border);
+  }
+  #orders {
+    width: 30vw;
+    height: 35vw;
+  }
+  #orders span {
+    width: 25vw;
+  }
+  .orderHeaders > div {
+    font-size: 2.5vw;
+  }
+  #bartenders {
+    width: 90vw;
+    margin-left: 4vw;
+    margin-top: 117vw;
+  }
+  #Jonas {
+    width: 90vw;
+    height: 35vw;
+    border: 0.5vw solid var(--Border);
+  }
+  #Peter {
+    width: 90vw;
+    height: 35vw;
+    border: 0.5vw solid var(--Border);
+  }
+  #Dannie {
+    width: 90vw;
+    height: 35vw;
+    border: 0.5vw solid var(--Border);
+  }
+  .bartendInfo {
+    width: 40vw;
+  }
+  #bartenders div p {
+    font-size: 4vw;
+    margin: 2vw;
+  }
+  #overview {
+    width: 50vw;
+    margin-left: 10vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+}
+
+@media only screen and (max-width: 749px) {
+  #statistics {
+    width: 90vw;
+    height: 25vw;
+    margin-top: 2vw;
+    border: 0.5vw solid var(--Border);
+  }
+  .stat_header {
+    height: 4.5vw;
+  }
+  h2 {
+    font-size: 3.5vw;
+  }
+  #stats_wrap {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .textstats {
+    width: 25vw;
+    margin-left: 0vw;
+  }
+  h3 {
+    margin-top: 0.5vw;
+    font-size: 3vw;
+  }
+  .nums {
+    font-size: 6vw;
+  }
+  header > p {
+    position: absolute;
+    top: 33.5vw;
+    left: 44%;
+    font-size: 2.5vw;
+    font-weight: bold;
+  }
+  #pipe {
+    height: 5.5vw;
+    width: 140vw;
+    top: 7vw;
+  }
+  #pipeshade {
+    height: 3.5vw;
+  }
+  #bar {
+    margin-top: 31vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    pointer-events: inherit;
+    width: 90vw;
+    border: 0.5vw solid var(--Border);
+    border-radius: 0.5vw;
+    margin-left: 4vw;
+    height: 45vw;
+  }
+  .liquidDiv {
+    top: -28vw;
+    height: 25vw;
+  }
+  .drinkDiv > img {
+    height: 45vw;
+  }
+  .drinkDiv {
+    width: 20vw;
+  }
+  #tables {
+    margin-top: 79vw;
+    margin-left: 4vw;
+    width: 90vw;
+    height: 35vw;
+    border: 0.5vw solid var(--Border);
+  }
+  #orders {
+    width: 30vw;
+    height: 35vw;
+  }
+  #orders span {
+    width: 25vw;
+  }
+  .orderHeaders > div {
+    font-size: 2.5vw;
+  }
+  #bartenders {
+    width: 90vw;
+    margin-left: 4vw;
+    margin-top: 117vw;
+  }
+  #Jonas {
+    width: 90vw;
+    height: 35vw;
+    border: 0.5vw solid var(--Border);
+  }
+  #Peter {
+    width: 90vw;
+    height: 35vw;
+    border: 0.5vw solid var(--Border);
+  }
+  #Dannie {
+    width: 90vw;
+    height: 35vw;
+    border: 0.5vw solid var(--Border);
+  }
+  .bartendInfo {
+    width: 40vw;
+  }
+  #bartenders div p {
+    font-size: 4vw;
+    margin: 2vw;
+  }
+  #overview {
+    width: 50vw;
+    margin-left: 10vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
 }

@@ -17,6 +17,7 @@ pageLoad();
 
 function pageLoad(){
     loadData(); 
+    getOrder();
 }
 function loadData (){
     fetch("https://beer-bar.herokuapp.com/")
@@ -27,7 +28,27 @@ function loadData (){
         prepIfos(jsonData);
     });
 }
+function getOrder() {
+    console.log("hi there");
+    fetch("https://foobar-1293.restdb.io/rest/foormidable", {
+        method: "get",
+        headers: {
+                "Content-Type": "application/json; charset=utf-8",
+                "x-apikey": "60a4dea0e3b6e02545edaa5d",
+                "cache-control": "no-cache",
+            },
+    })
+        .then((e) => e.json())
+        .then((data) => data.forEach(showOrder));
+}
 
+function showOrder(order) {
+    console.log(order);
+    const template = document.querySelector("template").content;
+    const copy = template.cloneNode(true);
+    copy.querySelector(".tableOrder").textContent = order.table_id;
+    document.querySelector(".orderList").appendChild(copy);
+}
 
 function prepIfos(data) {
     let servedC = [];

@@ -130,8 +130,7 @@ p {
 
 #bar {
   position: absolute;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  
   align-items: baseline;
   width: 100vw;
   margin-top: -0.5vw;
@@ -142,15 +141,21 @@ p {
   z-index: -10;
 }
 
+#tapsDisplay {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
 /* DRINK EMPTYING */
 .liquidDiv {
   animation: liquid var(--animation-time) linear infinite;
   height: 12vw;
   position: relative;
-  top: -13vw;
+  top: -1.82vw;
   background-color: #ebb328;
   z-index: -5;
-  transform-origin: bottom;
+  transform-origin: top;
+  transform: rotate(180deg);
 }
 
 .drinkDiv {
@@ -210,8 +215,14 @@ p {
   grid-template-columns: 2fr 1fr 1fr;
 }
 
+.numberOrder  {
+  margin-left:  0.5vw;
+}
+.checkOrder{
+  text-align: center;
+}
 .orderHeaders > div {
-  font-size: 2vw;
+  font-size: 1.5vw;
   margin-left: 0.2vw;
 }
 
@@ -222,8 +233,8 @@ p {
 }
 
 .order > div {
-  font-size: 1.5vw;
-  text-align: center;
+  font-size: 1.2vw;
+
 }
 
 #overview {
@@ -234,60 +245,81 @@ p {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.t1 {
+.t1 img {
   position: relative;
   height: 7vw;
   width: 7vw;
   left: 1vw;
+  cursor: pointer;
 }
-.t2 {
+.t2 img {
   position: relative;
   height: 7vw;
   width: 7vw;
   left: 1vw;
+  cursor: pointer;
 }
 
-.t3 {
+.t3 img {
   position: relative;
   height: 7vw;
   width: 7vw;
   left: 1vw;
+  cursor: pointer;
 }
 
-.t4 {
+.t4 img {
   position: relative;
   height: 9vw;
   width: 9vw;
+  cursor: pointer;
 }
 
-.t5 {
+.t5 img {
   position: relative;
   height: 9vw;
   width: 9vw;
+  cursor: pointer;
 }
-.t6 {
+.t6 img {
   position: relative;
   height: 9vw;
   width: 9vw;
-}
-
-.t7 {
-  position: relative;
-  height: 9vw;
-  width: 9vw;
+  cursor: pointer;
 }
 
-.t8 {
+.t7 img {
   position: relative;
   height: 9vw;
   width: 9vw;
-}
-.t9 {
-  position: relative;
-  height: 9vw;
-  width: 9vw;
+  cursor: pointer;
 }
 
+.t8 img {
+  position: relative;
+  height: 9vw;
+  width: 9vw;
+  cursor: pointer;
+}
+.t9 img {
+  position: relative;
+  height: 9vw;
+  width: 9vw;
+  cursor: pointer;
+}
+.notification{
+  height: 2vw;
+  width: 2vw;
+  background-color: red;
+  position: absolute;
+  border-radius: 100%;
+  transform: translateX(1vw);
+  z-index: 2;
+}
+
+.hide + img {
+  pointer-events: none;
+}
 /*Bartenders*/
 
 #bartenders {
@@ -451,7 +483,7 @@ p {
     width: 20vw;
   }
   .liquidDiv {
-    top: -28vw;
+    top: -3.8vw;
     height: 25vw;
   }
   .drinkDiv > img {
@@ -564,7 +596,7 @@ p {
     height: 45vw;
   }
   .liquidDiv {
-    top: -28vw;
+    top: -3.9vw;
     height: 25vw;
   }
   .drinkDiv > img {

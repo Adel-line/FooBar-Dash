@@ -31,46 +31,8 @@
       <div id="pipe">
         <div id="pipeshade"></div>
       </div>
-      <div class="drinkDiv">
-        <img src="./Images/fairyTaleAle.png" alt="Fairy tale ale">
-        <div class="liquidDiv"></div>
+      <div id="tapsDisplay">
       </div>
-      <div class="drinkDiv">
-        <img src="./Images/hoppilyEverAfter.png" alt="Hoppily ever after">
-        <div class="liquidDiv"></div>
-      </div>
-      <div class="drinkDiv">
-        <img src="./Images/hollaback.png" alt="Hollaback">
-        <div class="liquidDiv"></div>
-      </div>
-      <div class="drinkDiv">
-        <img src=".//Images/hefe.png" alt="El Hefe">
-        <div class="liquidDiv"></div>
-      </div>
-      <div class="drinkDiv">
-        <img src="./Images/mowinTime.png" alt="Mowintime">
-        <div class="liquidDiv"></div>
-      </div>
-      <div class="drinkDiv">
-        <img src="./Images/fooBar.png" alt="Row 26">
-        <div class="liquidDiv"></div>
-      </div>
-      <div class="drinkDiv">
-        <img src="./Images/ruinedChildhood.png" alt="Ruined Childhood">
-        <div class="liquidDiv"></div>
-      </div>
-      <!-- <div class="drinkDiv">
-        <img src="./Images/gitHop.png" alt="Githop">
-        <div class="liquidDiv"></div>
-      </div>
-      <div class="drinkDiv">
-        <img src="./Images/sleighRide.png" alt="Sleighride">
-        <div class="liquidDiv"></div>
-      </div>
-      <div class="drinkDiv">
-        <img src="./Images/steamPunk.png" alt="Steampunk">
-        <div class="liquidDiv"></div>
-      </div> -->
     </div>
 
     <div id="statistics">
@@ -147,67 +109,92 @@
         </template>
       </div>
       <div id="overview">
-        <img class="t1" src="./Images/tableS@2x.png" alt="table1">
-        <img class="t2" src="./Images/tableS@2x.png" alt="table2">
-        <img class="t3" src="./Images/tableS@2x.png" alt="table3">
-        <img class="t4" src="./Images/tableR@2x.png" alt="table4">
-        <img class="t5" src="./Images/tableR@2x.png" alt="table5">
-        <img class="t6" src="./Images/tableR@2x.png" alt="table6">
-        <img class="t7" src="./Images/tableR@2x.png" alt="table7">
-        <img class="t8" src="./Images/tableR@2x.png" alt="table8">
-        <img class="t9" src="./Images/tableR@2x.png" alt="table9">
+        <div class="t1">
+          <div class="notification hide "></div>
+          <img src="./Images/tableS@2x.png" alt="table1">
+        </div>
+        <div class="t2">
+          <div class="notification hide "></div>
+          <img src="./Images/tableS@2x.png" alt="table2">
+        </div>
+        <div class="t3">
+          <div class="notification hide "></div>
+          <img src="./Images/tableS@2x.png" alt="table3">
+        </div>
+        <div class="t4">
+          <div class="notification hide "></div>
+          <img src="./Images/tableR@2x.png" alt="table4">
+        </div>
+        <div class="t5">
+          <div class="notification hide "></div>
+          <img src="./Images/tableR@2x.png" alt="table5">
+        </div>
+        <div class="t6">
+          <div class="notification hide "></div>
+          <img src="./Images/tableR@2x.png" alt="table6">
+        </div>
+        <div class="t7">
+          <div class="notification hide "></div>
+          <img src="./Images/tableR@2x.png" alt="table7">
+        </div>
+        <div class="t8">
+          <div class="notification hide "></div>
+          <img src="./Images/tableR@2x.png" alt="table8">
+        </div>
+        <div class="t9">
+          <div class="notification hide "></div>
+          <img src="./Images/tableR@2x.png" alt="table9">
+        </div>
 
       </div>
     </section>
   </main>
 
   <!-- MODAL -->
-  <div id="modal" class="hide">
-    <button>X</button>
-    <div id="container">
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Amount</th>
-            <th>Each</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Fairy Tale Ale</td>
-            <td>2</td>
-            <td>20kr</td>
-            <td>40kr</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-      <div id="headerC">
-        <h2>Table 2</h2>
-        <p>#1284</p>
-      </div>
-      <button>Guests</button>
-      <button>Print Receipt</button>
-    </div>
-
+  <div>
+    <button id="closingButton" class="hide">X</button>
+<div id="modal" class="hide">
   </div>
+  </div>
+  
+  
+  
+  <template id="modaleTempl">
+  
+    <div class="container">
+  
+      <div>
+      <div id="headerC">
+      <h2></h2>
+      <p></p>
+      </div>
+      <div class="orders">
+      </div>
+<button class="optionsbut">Print Receipt</button>
+</div>
+</div>
+</template>
+
+<template id="beerOrderTemp">
+  <div>
+    <article class="beerOrder">
+      <div class="beername"></div>
+      <div class="orderAmoute"></div>
+      <div class="orderPrice"></div>
+    </article>
+    </div>
+</template>
+
   <template id="beersinfo">
     <img src="" alt="labels">
     <h2><span>Name</span></h2>
     <p><span>Capacity</span></p>
+  </template>
+  <template id="tapsTemplate">
+    <div class="drinkDiv">
+      <img class="tapImg" src="" alt="">
+      <div class="liquidDiv"></div>
+    </div>
   </template>
   <script type="module" src="/main.js"></script>
 </body>

@@ -46,6 +46,7 @@ function showOrder(order) {
     console.log(order);
     const template = document.querySelector("template").content;
     const copy = template.cloneNode(true);
+    copy.querySelector(".numberOrder").textContent = order._id.substring(0,5);
     copy.querySelector(".tableOrder").textContent = order.table_id;
     document.querySelector(".orderList").appendChild(copy);
 }

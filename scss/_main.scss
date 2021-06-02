@@ -8,6 +8,7 @@ html {
   --Modal: #0b2626da;
   --Container: #fffaf1;
   --order: white;
+  --headers: #A1763A;
 }
 
 html[data-theme="dark"] {
@@ -15,15 +16,16 @@ html[data-theme="dark"] {
   --Bg: #0b2626;
   --Color: #e3b449;
   --Border: #fffaf1;
-  --Modal: #e3b549e7;
+  --Modal: #A1763A;
   --Container: #fffaf1;
   --orders: #fffaf1;
+  --headers: #0b2626;
 }
 
 body {
   color: var(--Color);
   margin: 0px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  // font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   overflow-x: hidden;
 }
 
@@ -31,7 +33,11 @@ main {
   height: auto;
   width: 100%;
 }
+
+
 /*Header*/
+
+
 #app {
   width: 15vw;
   display: flex;
@@ -42,15 +48,33 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  background-color: #fffaf1;
+  background-color: var(--Bg);
   margin-top: -1vw;
   padding: 0.5vw;
   height: 4vw;
 }
+
+.logo {
+  z-index: 100;
+  width: 9vw;
+  height: 2.5vw;
+  margin-left: 2vw;
+  margin-top: 1vw;
+}
+
+
+// #logolight {
+//   position: absolute;
+//   width: 19vw;
+//   height: 15vw;
+//   z-index: 10;
+// }
+
+
 #switch {
   cursor: pointer;
-  width: 4.5vw;
-  height: 2vw;
+  width: 4vw;
+  height: 1.7vw;
   background: var(--Color);
   margin: 0;
   display: flex;
@@ -59,6 +83,7 @@ header {
   border-radius: 100px;
   position: relative;
   appearance: none;
+  margin-right: 0.5vw;
 }
 
 #switch:after {
@@ -76,7 +101,7 @@ header {
   transform: translateX(1vw);
 }
 label {
-  font-size: 1.8vw;
+  font-size: 1.6vw;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   z-index: 10;
 }
@@ -101,8 +126,9 @@ h3 {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+
 p {
-  font-size: 1.8vw;
+  font-size: 1.6vw;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
@@ -120,7 +146,7 @@ p {
 #pipeshade {
   position: absolute;
   width: 100%;
-  height: 1.5vw;
+  height: 1.6vw;
   background-color: rgb(110, 110, 110);
   margin-top: 0.9vw;
   z-index: -2;
@@ -130,15 +156,22 @@ p {
 
 #bar {
   position: absolute;
-  
   align-items: baseline;
   width: 100vw;
   margin-top: -0.5vw;
   pointer-events: none;
   overflow-x: hidden;
   height: 19vw;
-  background-color: #fffaf1;
   z-index: -10;
+}
+
+#coverup {
+  position: relative;
+  z-index: -10;
+  width: 100%;
+  height: 15vw;
+  top: -23vw;
+  background-color: #fffaf1;
 }
 
 #tapsDisplay {
@@ -201,10 +234,11 @@ p {
   border-radius: 0.3vw;
   z-index: 1;
 }
+
 #orders span {
   display: block;
   height: 0.15vw;
-  width: 12vw;
+  width: 14vw;
   background-color: var(--Color);
   margin-left: 1vw;
 }
@@ -213,6 +247,10 @@ p {
   display: grid;
   margin-left: 1vw;
   grid-template-columns: 2fr 1fr 1fr;
+  margin-left: -2vw;
+  color: #0b2626;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.3vw;
 }
 
 .numberOrder  {
@@ -230,6 +268,8 @@ p {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   margin-left: 1vw;
+  margin-bottom: 0.4vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .order > div {
@@ -320,6 +360,7 @@ p {
 .hide + img {
   pointer-events: none;
 }
+
 /*Bartenders*/
 
 #bartenders {
@@ -383,7 +424,6 @@ p {
   height: 100%;
 }
 
-// Bartenders Info
 
 /*Statistics*/
 
@@ -400,8 +440,9 @@ p {
 .stat_header {
   background-color: beige;
   height: 2vw;
-  margin-top: 0.1vw;
+  margin-top: -0.9vw;
   border-radius: 0.2vw;
+  align-items: baseline;
 }
 
 #stats_wrap {

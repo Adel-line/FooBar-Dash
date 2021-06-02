@@ -7,8 +7,10 @@ checkbox.addEventListener('change', function() {
     if(this.checked) {
         document.documentElement.setAttribute('data-theme', 'dark')
         document.querySelector("#mode").innerHTML = "Light Mode";
+         document.querySelector(".logo").src = "./Images/logolight.png";
     } else {
         document.documentElement.setAttribute('data-theme', 'light')
+        document.querySelector(".logo").src = "./Images/logo.png";
         document.querySelector("#mode").innerHTML = "Dark Mode";
     }
 });

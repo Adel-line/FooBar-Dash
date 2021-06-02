@@ -11,7 +11,7 @@
 
 <body>
   <header>
-    <h1>FOOBAR</h1>
+    <img src="./Images/logo.png" class="logo" alt="">
     <P>INVENTORY</P>
 
     <!-- Dark Mode Switch -->
@@ -31,13 +31,18 @@
       <div id="pipe">
         <div id="pipeshade"></div>
       </div>
+
       <div id="tapsDisplay">
       </div>
+      <div id="coverup"></div>
     </div>
 
-    <div id="statistics">
+    <!-- STATISTICS -->
 
-      <h2 class="stat_header">Bar Statistics</h2>
+    <div id="statistics">
+      <div class="stat_header">
+        <h2>Bar Statistics</h2>
+      </div>
       <div id="stats_wrap">
         <!-- People Served: -->
         <div class="done general">
@@ -95,9 +100,18 @@
         <h3>Orders no. </h3>
         <span></span>
         <div class="orderHeaders">
-          <div class="order">order</div>
-          <div class="table">table</div>
-          <div class="check">check</div>
+          <div class="orderr">
+            <h2>order
+            </h2>
+          </div>
+          <div class="table">
+            <h2>table
+            </h2>
+          </div>
+          <div class="check">
+            <h2>check
+            </h2>
+          </div>
         </div>
         <div class="orderList"></div>
         <template class="orderTemplate">
@@ -153,37 +167,34 @@
   <!-- MODAL -->
   <div>
     <button id="closingButton" class="hide">X</button>
-<div id="modal" class="hide">
-  </div>
-  </div>
-  
-  
-  
-  <template id="modaleTempl">
-  
-    <div class="container">
-  
-      <div>
-      <div id="headerC">
-      <h2></h2>
-      <p></p>
-      </div>
-      <div class="orders">
-      </div>
-<button class="optionsbut">Print Receipt</button>
-</div>
-</div>
-</template>
-
-<template id="beerOrderTemp">
-  <div>
-    <article class="beerOrder">
-      <div class="beername"></div>
-      <div class="orderAmoute"></div>
-      <div class="orderPrice"></div>
-    </article>
+    <div id="modal" class="hide">
     </div>
-</template>
+  </div>
+  <template id="modaleTempl">
+
+    <div class="container">
+
+      <div>
+        <div id="headerC">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="orders">
+        </div>
+        <button class="optionsbut">Print Receipt</button>
+      </div>
+    </div>
+  </template>
+
+  <template id="beerOrderTemp">
+    <div>
+      <article class="beerOrder">
+        <div class="beername"></div>
+        <div class="orderAmoute"></div>
+        <div class="orderPrice"></div>
+      </article>
+    </div>
+  </template>
 
   <template id="beersinfo">
     <img src="" alt="labels">

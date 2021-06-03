@@ -110,7 +110,6 @@ function prepIfos(data) {
 function showTabels(orders) {
     console.log(orders);
     orders.forEach(element => {
-
         document.querySelector( ".t"+ element.table_id.substring(5)+ " .notification").classList.remove("hide");
         document.querySelector( ".t"+ element.table_id.substring(5)+ " .notification + img").classList.add("orderwating");
         

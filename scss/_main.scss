@@ -253,6 +253,10 @@ p {
   font-size: 0.3vw;
 }
 
+.orderList {
+  overflow-y: scroll;
+  height: 19vw;
+}
 .numberOrder  {
   margin-left:  0.5vw;
 }
@@ -536,6 +540,12 @@ p {
     width: 90vw;
     height: 35vw;
     border: 0.5vw solid var(--Border);
+  }
+  .orderList {
+    height: 17vw;
+  }
+  .order > div{
+    font-size: 1.8vw;
   }
   #orders {
     width: 30vw;

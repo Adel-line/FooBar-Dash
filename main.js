@@ -25,7 +25,7 @@ function loadData (){
     fetch("https://beer-bar.herokuapp.com/")
     .then(r => r.json())
     .then (jsonData => {
-        // loaded --> prepare objects
+        // loaded --> prepare objects   
         console.log(jsonData);
         prepIfos(jsonData);
     });
@@ -71,7 +71,7 @@ function prepIfos(data) {
         if (window.matchMedia('(max-width: 1100px)').matches) {
             copy.querySelector(".liquidDiv").style.height = 24 *liquidPourcent +"vw";
         }else {
-            copy.querySelector(".liquidDiv").style.height = 11 *liquidPourcent +"vw";;
+            copy.querySelector(".liquidDiv").style.height = 11 *liquidPourcent +"vw";
         }
         //let lightfull = copy.querySelector(".liquidDiv").offsetHeight;
         element.beer =  element.beer.replaceAll(" ", "");
@@ -132,12 +132,8 @@ function showTabels(orders) {
         document.querySelector("#closingButton").classList.remove("hide"); 
         document.querySelector("#modal").classList.remove("hide");
 
+
         
-        document.querySelector("#closingButton").addEventListener("click" , () => {
-            document.querySelector("#modal").classList.add("hide"); 
-            document.querySelector("#closingButton").classList.add("hide"); 
-        })
-    }
     function populationing (order) {
         
         const newodermod = document.querySelector("#modaleTempl").content;
@@ -152,15 +148,40 @@ function showTabels(orders) {
             clone.querySelector(".orderPrice").textContent = beer.price + "dkk";
             copy.querySelector(".orders").appendChild(clone);
         });
+        
         document.querySelector("#modal").appendChild(copy);
+        document.querySelector(".optionsbut").addEventListener("click", delet);
+        function delet () {
+
+            fetch("https://foobar-1293.restdb.io/rest/foormidable/"+order._id , {
+                method: "delete",
+                headers: {
+                    "Content-Type": "application/json; charset=utf-8",
+                    "x-apikey": "60a4dea0e3b6e02545edaa5d",
+                    "cache-control": "no-cache",
+                },
+            })
+            .then((res)=> res.json())
+            .then((data)=> console.log(data));
+        }
     }
+    
+    
+
+    document.querySelector("#closingButton").addEventListener("click" , () => {
+        document.querySelector("#modal").classList.add("hide"); 
+        document.querySelector("#closingButton").classList.add("hide"); 
+    })
 }
+}
+
+
 
 
 
 function wait() {
     setTimeout(loadData,5000);
-    setTimeout(getOrder,5000);
+    setTimeout(getOrder,10000);
 
 }
 // Random Time

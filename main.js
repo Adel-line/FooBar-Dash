@@ -148,25 +148,13 @@ function showTabels(orders) {
             clone.querySelector(".orderPrice").textContent = beer.price + "dkk";
             copy.querySelector(".orders").appendChild(clone);
         });
-        
+        copy.querySelector(".optionsbut").id =order._id;
         document.querySelector("#modal").appendChild(copy);
-        document.querySelector(".optionsbut").addEventListener("click", delet);
-        function delet () {
-
-            fetch("https://foobar-1293.restdb.io/rest/foormidable/"+order._id , {
-                method: "delete",
-                headers: {
-                    "Content-Type": "application/json; charset=utf-8",
-                    "x-apikey": "60a4dea0e3b6e02545edaa5d",
-                    "cache-control": "no-cache",
-                },
-            })
-            .then((res)=> res.json())
-            .then((data)=> console.log(data));
-        }
+        
+        
     }
     
-    
+    document.querySelectorAll(".optionsbut").forEach(x => x.addEventListener("click", delet))
 
     document.querySelector("#closingButton").addEventListener("click" , () => {
         document.querySelector("#modal").classList.add("hide"); 
@@ -175,7 +163,22 @@ function showTabels(orders) {
 }
 }
 
-
+function delet () {
+    
+    let id = event.target.id ;
+    console.log(id);
+    
+    fetch("https://foobar-1293.restdb.io/rest/foormidable/"+id , {
+        method: "delete",
+        headers: {
+            "Content-Type": "application/json; charset=utf-8",
+            "x-apikey": "60a4dea0e3b6e02545edaa5d",
+            "cache-control": "no-cache",
+        },
+    })
+    .then((res)=> res.json())
+    .then((data)=> console.log(data));
+}
 
 
 
